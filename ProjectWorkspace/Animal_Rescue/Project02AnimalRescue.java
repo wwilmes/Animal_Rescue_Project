@@ -60,6 +60,14 @@ class Animal {
 		}
 		return weightCategory;
 	}
-	
+	public void displayAnimalAnalysis() {
+		System.out.println("=====Animal Summary=====");
+		System.out.println("Animal Name: "+ name);
+		System.out.println("Species: "+ species);
+		System.out.printf("Weight: %.2f lbs\n", weight);
+		System.out.println("Weight Category: "+ determineWeightCategory());
+		System.out.printf("Daily Food: %.2f cups\n", dailyFoodAmount);
+		System.out.printf("Weekly food amount: %.2f cups\n", calculateWeeklyFood());
+	}
 }
 
