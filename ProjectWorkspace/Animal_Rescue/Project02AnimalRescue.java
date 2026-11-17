@@ -15,7 +15,7 @@ public class Project02AnimalRescue {
 
 	}
 
-}
+}// end class
 class Animal {
 	private String name;
 	private String species;
@@ -68,6 +68,20 @@ class Animal {
 		System.out.println("Weight Category: "+ determineWeightCategory());
 		System.out.printf("Daily Food: %.2f cups\n", dailyFoodAmount);
 		System.out.printf("Weekly food amount: %.2f cups\n", calculateWeeklyFood());
+	}
+}//end Class
+class RescueCenter{
+	private String rescueName;
+	private Animal[] animals;
+	private int animalCount;
+	
+	public RescueCenter(String rescueName, int maxAnimals) {
+		this.rescueName = rescueName;
+		this.animals = new Animal[maxAnimals];
+		this.animalCount = 0;
+		
+		
+		
 	}
 }
 
