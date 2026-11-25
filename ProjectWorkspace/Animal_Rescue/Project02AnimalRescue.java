@@ -34,7 +34,7 @@ class Animal {
 	public double getDailyFoodAmount() {
 		return dailyFoodAmount;
 	}
-	public double getWeight() {
+	public double getWeght() {
 		return weight;
 	}
 	public String getSpecies() {
@@ -79,9 +79,20 @@ class RescueCenter{
 		this.rescueName = rescueName;
 		this.animals = new Animal[maxAnimals];
 		this.animalCount = 0;
-		
-		
-		
+	}
+	public String getRescueName() {
+		return rescueName;
+	}
+	public int getAnimalCount() {
+		return animalCount;
+	}
+	public void addAnimal(Animal newAnimal) {
+		if (animalCount < animals.length) {
+			animals[animalCount] = newAnimal;
+			animalCount++;
+		} else {
+			System.out.println("Error: Rescue Full " + newAnimal.getName() + " " + newAnimal.getSpecies() + " Not added");
+		}
 	}
 }
 
