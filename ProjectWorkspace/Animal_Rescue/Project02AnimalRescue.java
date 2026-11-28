@@ -106,5 +106,11 @@ class RescueCenter{
 			System.out.println("Error: Rescue Full " + newAnimal.getName() + " " + newAnimal.getSpecies() + " Not added");
 		}
 	}
+	public void displayAnimalResults() {
+		for(int i = 0; i < animalCount; i++) {
+			animals[i].displayAnimalAnalysis();
+		}
+	}
+	
 }
 
