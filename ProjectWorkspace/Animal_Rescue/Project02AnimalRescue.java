@@ -12,7 +12,19 @@ public class Project02AnimalRescue {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		//Test Animal Class
+		Animal animal1 = new Animal ("Oliver", "Cat", 12.5, 1.0);
+		Animal animal2 = new Animal ("Stella", "Dog", 50.0, 3.0);
+		
+		System.out.println("Name: " + animal1.getName());
+		System.out.println("Species: "+ animal1.getSpecies());
+		System.out.println("Weight: "+ animal1.getWeght());
+		System.out.println("Daily Food: "+ animal1.getDailyFoodAmount());
+		System.out.println("Weekly Food: "+ animal1.calculateWeeklyFood());
+		System.out.println("Weight Category: "+ animal1.determineWeightCategory());
+		System.out.println("Animal Analysis for both animals: ");
+		animal1.displayAnimalAnalysis();
+		animal2.displayAnimalAnalysis();
 	}
 
 }// end class
