@@ -12,10 +12,22 @@ public class Project02AnimalRescue {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Test Animal Class
+		//Test Animal Class and Rescue Class 
+		RescueCenter center = new RescueCenter("Testy Test Rescue", 2);
+		System.out.println("Prior animal count: " + center.getAnimalCount());
+		System.out.println("Rescue Center Name: "+ center.getRescueName());
+		
+		Animal animal0 = new Animal ("Rio", "Bird", .07, .02);
 		Animal animal1 = new Animal ("Oliver", "Cat", 12.5, 1.0);
 		Animal animal2 = new Animal ("Stella", "Dog", 50.0, 3.0);
 		
+		center.addAnimal(animal0);
+		center.addAnimal(animal1);
+		center.addAnimal(animal2);
+		System.out.println("Animal count after adding animals: "+center.getAnimalCount());
+		center.displayAnimalResults();
+		
+		/*
 		System.out.println("Name: " + animal1.getName());
 		System.out.println("Species: "+ animal1.getSpecies());
 		System.out.println("Weight: "+ animal1.getWeght());
@@ -25,6 +37,7 @@ public class Project02AnimalRescue {
 		System.out.println("Animal Analysis for both animals: ");
 		animal1.displayAnimalAnalysis();
 		animal2.displayAnimalAnalysis();
+		*/
 	}
 
 }// end class
@@ -103,7 +116,7 @@ class RescueCenter{
 			animals[animalCount] = newAnimal;
 			animalCount++;
 		} else {
-			System.out.println("Error: Rescue Full " + newAnimal.getName() + " " + newAnimal.getSpecies() + " Not added");
+			System.out.println("****Error: Rescue Full!!!**** " + newAnimal.getName() + " the " + newAnimal.getSpecies() + " Not added");
 		}
 	}
 	public void displayAnimalResults() {
